@@ -1,4 +1,4 @@
-﻿#include <bangtal.h>
+﻿#include <bangtal>
 using namespace bangtal;
 
 int main()

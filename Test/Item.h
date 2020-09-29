@@ -1,5 +1,5 @@
 #pragma once
-#include <bangtal.h>
+#include <Object.h>
 
 class Item : public bangtal::Object
 {

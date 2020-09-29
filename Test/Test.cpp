@@ -1,4 +1,6 @@
-﻿#include "Item.h"
+﻿#include <bangtal>
+
+#include "Item.h"
 #include "Door.h"
 
 using namespace bangtal;
@@ -27,3 +29,4 @@ int main()
 
 	startGame(scene1);
 }
+

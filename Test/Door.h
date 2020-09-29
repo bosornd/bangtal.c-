@@ -1,6 +1,5 @@
 #pragma once
-
-#include <bangtal.h>
+#include <Object.h>
 
 class Door : public bangtal::Object
 {
