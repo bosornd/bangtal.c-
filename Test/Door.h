@@ -1,10 +1,15 @@
 #pragma once
 #include <Object.h>
 
+#include <memory>
+
+class Door;
+typedef std::shared_ptr<Door> DoorPtr;
+
 class Door : public bangtal::Object
 {
 public:
-	static bangtal::ObjectPtr create(const std::string& openedImage, bangtal::ScenePtr locatedScene = nullptr, int x = 0, int y = 0,
+	static DoorPtr create(const std::string& openedImage, bangtal::ScenePtr locatedScene = nullptr, int x = 0, int y = 0,
 		bangtal::ScenePtr connectedScene = nullptr, bool closed = false, const std::string& closedImage = "", bool shown = true);
 
 protected:
@@ -12,6 +17,7 @@ protected:
 
 public:
 	virtual bool onMouse(int x, int y, MouseAction action);
+	bool getClosed() const { return _closed; };
 
 protected:
 	bool _closed;

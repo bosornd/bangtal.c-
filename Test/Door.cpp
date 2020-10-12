@@ -3,10 +3,10 @@
 using namespace std;
 using namespace bangtal;
 
-ObjectPtr Door::create(const string& openedImage, ScenePtr locatedScene, int x, int y,
+DoorPtr Door::create(const string& openedImage, ScenePtr locatedScene, int x, int y,
 	ScenePtr connectedScene, bool closed, const string& closedImage, bool shown)
 {
-	auto object = ObjectPtr(new Door(openedImage, locatedScene, x, y, connectedScene, closed, closedImage, shown));
+	auto object = DoorPtr(new Door(openedImage, locatedScene, x, y, connectedScene, closed, closedImage, shown));
 	Object::add(object);
 
 	return object;
