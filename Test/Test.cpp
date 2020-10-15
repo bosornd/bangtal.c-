@@ -18,6 +18,9 @@ int main()
 	});
 
 	auto door1 = Door::create("Images/문-오른쪽-열림.png", scene1, 800, 270, scene2, true, "Images/문-오른쪽-닫힘.png");
+	if (door1->getClosed())
+		showMessage("문이 닫혀있습니다.");
+
 	door1->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		auto door = std::dynamic_pointer_cast<Door>(object);
 		showMessage(door->getClosed() ? "닫힘 --> 열림" : "열림 --> 장면 연결");
