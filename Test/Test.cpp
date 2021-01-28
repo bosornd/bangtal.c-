@@ -12,8 +12,8 @@ int main()
 	auto scene1 = Scene::create("룸1", "Images/배경-1.png");
 	auto scene2 = Scene::create("룸2", "Images/배경-2.png");
 
-	scene1->setOnKeyboardCallback([&](ScenePtr scene, int key, bool pressed)->bool {
-		std::cout << key << pressed << std::endl;
+	scene1->setOnKeyboardCallback([&](ScenePtr scene, KeyCode key, bool pressed)->bool {
+		std::cout << (int)key << pressed << std::endl;
 		return true;
 	});
 
